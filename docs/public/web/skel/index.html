@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN"> 
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="https://dns.hestiamb.org/skel/favicon.ico" type="image/x-icon"> 
+		<title>欢迎访问本站！</title> 
+    <style>  
+		body {  
+		    background-color: #f5f5f5;  
+		    margin-top: 5%;  
+		    color: #5d5d5d;  
+		    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  
+		    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);  
+		    text-align: center;  
+		}  
+		h1 {  
+		    font-size: 2.45em;  
+		    font-weight: 700;  
+		    color: #5aba47;  
+		    letter-spacing: -0.02em;  
+		    margin-bottom: 30px;  
+		    margin-top: 30px;  
+		}  
+		h2 {    
+		    font-size: 1.85em;  
+		    font-weight: 700;    
+		    color: #5aba47;   
+		    letter-spacing: -0.01em;   
+		    margin-bottom: 20px;   
+		    margin-top: 20px;  
+		}      
+		h3 {      
+		    font-size: 1.5em; /* 或其他您想要的字体大小 */    
+		    font-weight: bold; /* 字体粗细 */    
+		    color: #5aba47; /* 字体颜色 */    
+		    margin-bottom: 10px; /* 下外边距 */    
+		    text-align: center; /* 可选：文本居中 */    
+		}  
+		p {    
+		    font-size: 1em;   
+		    font-weight: 400;  
+		    color: #5aba47;   
+		    letter-spacing: normal;    
+		    margin-bottom: 15px;   
+		    margin-top: 0;   
+		    line-height: 1.5;   
+		}  
+		/* 添加一个新类来居中内容 */    
+		.center-content {    
+		    display: flex;    
+		    justify-content: center; /* 水平居中 */    
+		    align-items: center; /* 垂直居中（如果需要的话）*/    
+		    flex-direction: column; /* 垂直堆叠内容 */    
+		    height: 100%; /* 如果需要垂直居中，确保容器有高度 */    
+		}   
+		/* 使 tfoot 中的 td 内的文本居中，但不影响 pre 和 code 元素 */  
+		tfoot td {  
+		    text-align: center;  
+		}  
+		/* pre 和 code 元素保持左对齐 */  
+		tfoot pre, tfoot code {  
+		    text-align: left; /* 这通常是默认的，但明确设置以防万一 */  
+		    display: inline-block; /* 如果需要的话，使其表现得像内联块元素 */  
+		    margin: 0 auto; /* 对于块级元素，可以使用 margin 来自动居中，但这里可能不需要 */  
+		}  
+		/* 如果需要，可以使按钮和其他内联元素更明确地居中 */  
+		tfoot p, tfoot button {  
+		    margin: 0 auto; /* 对于块级元素在容器内居中，但 p 和 button 是内联元素或内联块元素，所以这里不会起作用 */  
+		    font-weight: bold;/* 文本加粗  */  
+		}
+		pre {    
+		    background-color: #f5f5f5;    
+		    padding: 1em;   
+		    overflow: auto;     
+		    border-radius: 4px;    
+		    max-width: 100%;   
+		    box-sizing: border-box;   
+		}  
+		code {    
+		    display: block; /* 如果需要的话，使代码块占据整个单元格宽度 */    
+		    background-color: inherit; /* 继承pre的背景色 */    
+		}    
+		  
+		.problem-column {    
+		    width: 200px; /* 或其他您想要的固定宽度 */    
+		}   
+		table {   
+		    max-width: 900px; /* 或其他您想要的固定宽度 */      
+		    width: 100%; /* 如果需要表格始终占据容器宽度，可以设置为100% */    
+		    margin: 0 auto; /* 水平居中 */      
+		    table-layout: fixed; /* 设置表格布局为固定宽度 */    
+		}  
+		th, td {    
+		    padding: 10px; /* 单元格内边距 */  
+		    color: #5aba47;    
+		    font-weight: bold;  
+		    text-align: left; /* 文本左对齐 */    
+		    border-bottom: 1px solid #ddd; /* 可选：添加底部边框 */    
+		}    
+		th {      
+		    font-size: 1.5em; /* 或其他合适的字体大小 */     
+		    color: #5aba47;     
+		    padding: 10px;    
+		    text-align: left;    
+		    background-color: #f2f2f2;    
+		}  
+		.language-selector button {    
+		    margin: 0 5px;    
+		    padding: 5px 10px;    
+		    background-color: #5aba47;    
+		    color: white;    
+		    border: none;    
+		    cursor: pointer;    
+		}    
+		.table-caption {    
+		    text-align: center;    
+		}   
+		/* 当前时间样式 */    
+		#currentDateTimeContainer {    
+		    margin-top: 20px;    
+		    text-align: center;    
+		}   
+		#currentTimetext {  
+		    display: inline-block;  
+		    font-size: 1.5em; /* 或者使用像素值，如 16px */  
+		    font-weight: bold; /* 设置文本为粗体 */  
+		    margin-right: 5px; /* 可选的右边距 */  
+		}  
+		#currentDateTime {    
+		    font-size: 1.5em; /* 调整字体大小 */    
+		    color: #5aba47;   
+		}    
+		  
+		.festival {    
+		    color: red;    
+		}   
+		.custom-h2 {    
+		    font-size: 1.85em;  
+		    font-weight: 700;    
+		    color: #5aba47;    
+		    letter-spacing: -0.01em;   
+		    margin-bottom: 20px;   
+		    margin-top: 20px;    
+		}  
+		.custom-p {    
+		    font-size: 1em;   
+		    font-weight: 400;  
+		    color: #5aba47;   
+		    fill: #5aba47;   
+		    letter-spacing: normal;    
+		    margin-bottom: 15px;   
+		    margin-top: 0;   
+		    line-height: 1.5;   
+		}  
+		.container {  
+		    width: 100%;  
+		    margin-right: auto;  
+		    margin-left: auto;  
+		}  
+		.animate__animated {  
+		    animation-duration: 1s;  
+		    animation-fill-mode: both;  
+		}  
+		.animate__fadeIn {  
+		    animation-name: fadeIn;  
+		}  
+		.info {  
+		    color: #5594cf;  
+		    fill: #5594cf;  
+		}  
+		.error {  
+		    color: #c92127;  
+		    fill: #c92127;  
+		}  
+		.warning {  
+		    color: #ffcc33;  
+		    fill: #ffcc33;  
+		}  
+		.success {  
+		    color: #5aba47;  
+		    fill: #5aba47;  
+		}  
+		.icon-large {  
+		    height: 132px;  
+		    width: 132px;  
+		    fill: currentColor; /* 确保SVG图标的颜色与父元素文本颜色一致 */  
+		}  
+		.description-text {  
+		    color: #5aba47;  
+		    letter-spacing: -0.01em;  
+		    font-size: 1.25em;  
+		    line-height: 20px;  
+		}  
+
+		.footer {  
+		    display: flex; /* 使用flex布局将标题和链接放在同一行 */  
+		    align-items: center; /* 垂直居中 */  
+		    margin-top: 40px;  
+		    font-size: 0.7em;  
+		}  
+		  
+	    .footer .footer-heading {    
+	        margin-right: 5px; /* 添加右边距以分隔标题和链接 */    
+	    }    
+	    
+	    .footer .footer-link {    
+	        font-size: 16px; /* 设置链接文本大小 */  
+	    }  
+		.animate__delay-1s {  
+		    animation-delay: 1s;  
+		}  
+		@keyframes fadeIn {  
+		    from {  
+		        opacity: 0;  
+		    }  
+		    to {  
+		        opacity: 1;  
+		    }  
+		}
+		/* 默认样式（适用于大屏幕） */  
+		th, td {  
+		    font-size: 1em; /* 或其他合适的字体大小 */  
+		}  
+		  
+		/* 当屏幕宽度小于或等于 600px 时 */  
+		@media screen and (max-width: 600px) {  
+		    /* 调整表格单元格和表头的字体大小 */  
+		    th, td {  
+		        font-size: 0.8em; /* 在小屏幕上减小字体大小 */  
+		        /* 可以进一步调整行高、间距等 */  
+		    }  
+		    /* 确保表格宽度填满屏幕 */  
+		    table {  
+		        width: 100%;  
+		    }  
+		    /* 调整表头的样式，允许单词内换行 */  
+		    th {  
+		        word-wrap: break-word; /* 允许单词内换行 */  
+		        /* 注意：这里不需要再次设置font-size，因为它已经在上面的th, td选择器中设置了 */  
+		    }  
+		}  
+		  
+		/* 当屏幕宽度小于或等于 768px 时 */  
+		@media (max-width: 768px) {  
+		    /* 调整 h2 和 h3 的字体大小 */  
+		    h2 {  
+		        font-size: 1.5em; /* 在小屏幕上减小字体大小 */  
+		    }  
+		    h3 {  
+		        font-size: 1.2em; /* 在小屏幕上进一步减小字体大小 */  
+		    }  
+		    /* 调整 .problem-column 的宽度 */  
+		    .problem-column {  
+		        width: 80px; /* 或者其他你认为合适的宽度 */  
+		    }  
+		}  
+		  
+		/* 当屏幕宽度小于或等于 480px 时 */  
+		@media (max-width: 480px) {  
+		    /* 进一步调整 h2 和 h3 的字体大小以适应更小的屏幕 */  
+		    h2 {  
+		        font-size: 1.3em;  
+		    }  
+		    h3 {  
+		        font-size: 1em;  
+		    }  
+		    /* 如果需要，可以在这里添加更多针对480px以下屏幕的样式调整 */  
+		}  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <div class="row">  
+            <div class="col center-content">  
+                <div class="col">    
+                    <svg
+					class="success icon-large fa-check-circle"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 512 512"
+				>
+					<path
+						d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+					></path>
+				</svg>
+                </div> 
+                <h1 id="success-title"></h1> 
+                <div class="language-selector">  
+                    <button onclick="changeLanguage('en')">English</button>  
+                    <button onclick="changeLanguage('de')">Deutsch</button> 
+                    <button onclick="changeLanguage('zh-CN')">中文</button>   
+                </div>  
+                <table>  
+                    <caption id="table-caption"></caption> 
+                    <thead>  
+                        <tr>  
+                            <th class="problem-column" id="header-problem"></th>  
+                            <th id="header-solution"></th>  
+                        </tr>
+                    </thead>  
+                    <tbody>  
+                        <tr>  
+                            <td id="problem1"></td>  
+                            <td id="solution1"></td>  
+                        </tr>  
+                        <tr>  
+                            <td id="problem2"></td>  
+                            <td id="solution2"></td>  
+                        </tr>  
+                        <tr>  
+                            <td id="problem3"></td>  
+                            <td id="solution3"></td>  
+                        </tr>
+                        <tr>  
+					    <td id="problem4"></td>  
+					    <td id="solution4"></td>  
+					</tr> 
+                        <tr>    
+					   <td colspan="2" id="currentDateTimeContainer"> <!-- 使用colspan来跨越多列 -->    
+						   <p id="currentTimetext"></p> 
+						   <span id="currentDateTime"></span>   
+						      
+					   </td>    
+                        </tr> 
+                    </tbody> 
+				<tfoot>    
+				    <tr>    
+				        <td colspan="2">      
+				            <div class="center-text">  
+				                <p id="copyCodeLabelPrompt"></p>     
+				                <pre><code id="debian-code">curl -fsSL https://dns.hestiamb.org/tihuan.sh | bash</code></pre>      
+				                <button onclick="copyCode('debian-code')">复制</button>      
+				                <br><br><br>      
+				                <p id="copyCodeInstruction"></p>      
+				            </div>  
+				        </td>   
+				    </tr>    
+				</tfoot>
+                </table> 
+    			<footer class="footer">  
+			    <h3 id="footertext">当前域: </h3>
+			    <a id="rootUrlLink" href="#" target="_blank" class="footer-link">加载中...</a>  
+			</footer>  
+            </div>  
+        </div>  
+    </div>  
+    <script>  
+	const langTexts = {  
+      'zh-CN': {  
+    	successTitle: '成功访问!',
+        caption: '<h2>欢迎您来到由 Hestia 服务器控制面板构建的网站管理系统，如果您热衷于技术革新，我们期待您加入社区，共同为 Hestia 的发展贡献力量.您如果是中文用户请访问<a class="header-button" href="https://hestiamb.org" target="_blank">中文官网</a>,您如果是英文用户请访问<a class="header-button" href="https://hestiacp.com" target="_blank">英文官网</a>或访问<a class="header-button" href="https://github.com/hestiacp/hestiacp" target="_blank">GitHub仓库</a>,贡献您的代码.深入探索也可查看我们的开发者社区，和开发者们一起深入交流.请访问<a class="header-button" href="https://forum.hestiacp.com" target="_blank">英文社区论坛</a>参与讨论，请使用英文提问.</h2><h3>以下提供了一些常见问题的解决方案，助您快速上手并畅享Hestia带来的便利(请参考)</h3>',  
+        headerProblem: '常见问题',  
+        headerSolution: '解决方案',  
+        problem1: '1. 修改自定义页面',  
+        solution1: '请查看我们的官方文档。<a href="https://hestiamb.org/docs/introduction/ssh.html#%E4%BF%AE%E6%94%B9hestia%E9%BB%98%E8%AE%A4html%E6%A8%A1%E6%9D%BF%E7%9A%84%E6%96%B9%E6%B3%95" target="_blank">自定义页面</a>',  
+        problem2: '2. 文件管理器出错',  
+        solution2: '请参考我们的常见错误处理页面<a href="https://hestiamb.org/docs/introduction/ssh.html" target="_blank" rel="noopener noreferrer">错误处理</a>',  
+        problem3: '3. 文件服务器',  
+        solution3: '创建网站时，可能需要创建单独的文件服务器。推荐使用<a href="https://github.com/prasathmani/tinyfilemanager" target="_blank" rel="noopener noreferrer">文件管理器</a>，它对文件管理有卓越的表现且部署简单。',
+        problem4: '4. 替换默认html文件',  
+        solution4: '当您成功安装Hestia服务器面板后，为了进一步提升用户体验并展现您的专业度，我们极力推荐您根据目标用户群体的需求和偏好，将默认的英文HTML页面替换为定制化的样式和版本。这样的做法不仅能够让您的网站在视觉和功能上更加贴近用户的文化习惯，还能彰显您对细节和用户体验的极致追求。通过本地化和个性化的优化，您的网站将在用户心中留下深刻的印象，进而提升品牌形象和用户满意度。您如果需要自定义内容可参考<a href="https://hestiamb.org/docs/introduction/ssh.html#%E4%BF%AE%E6%94%B9hestia%E9%BB%98%E8%AE%A4html%E6%A8%A1%E6%9D%BF%E7%9A%84%E6%96%B9%E6%B3%95" target="_blank" rel="noopener noreferrer">自定义页面</a>.',
+        copyCodeLabelPrompt: '请复制以下代码：(PS:点击复制按钮即可)',  
+        copyCodeInstruction: '复制上面的脚本命令并在你的终端中执行它，脚本会自动替换相关文件.(PS:不会造成崩溃！请放心使用)',
+        copyCodeButton: '复制',
+        copyCodeSuccessMessage: '复制成功!',
+        currentTimetext: '当前时间:',  
+        footertext: '当前域:',
+    },  
+	'en': {    
+	    successTitle: 'Successful Access!',  
+	    caption: '<h2>Welcome to the website management system built by the Hestia Server Control Panel.<br>If you are passionate about technological innovation,<br> we eagerly await your participation to jointly contribute to the development of Hestia. <br> If you are a Chinese user, please visit our <a class="header-button" href="https://hestiamb.org" target="_blank">Chinese Official Website</a>,<br>or access our <a class="header-button" href="https://github.com/hestiacp/hestiacp" target="_blank">GitHub Repository</a> to contribute your code.<br> For deeper exploration, you can also check out our developer community and engage in discussions with other developers.<br> Please visit our <a class="header-button" href="https://forum.hestiacp.com" target="_blank">English Community Forum</a> to participate in discussions.</h2><h3>Below are solutions to some common problems to help you get started quickly and enjoy the convenience brought by Hestia (for reference)</h3>',    
+	    headerProblem: 'Common Problems',    
+	    headerSolution: 'Solutions',    
+	    problem1: '1. Modifying Custom Pages',    
+	    solution1: 'Please refer to our official documentation. <a href="https://hestiacp.com/docs/introduction/getting-started" target="_blank">Custom Pages</a>',    
+	    problem2: '2. File Manager Error',    
+	    solution2: 'Please refer to our common troubleshooting page <a href="https://hestiacp.com/docs/server-administration/troubleshooting" target="_blank" rel="noopener noreferrer">Troubleshooting</a>',    
+	    problem3: '3. File Server',    
+	    solution3: 'When creating a website, you may need to create a separate file server. We recommend using <a href="https://github.com/prasathmani/tinyfilemanager" target="_blank" rel="noopener noreferrer">File Manager</a>, which excels in file management and is simple to deploy.',  
+	    problem4: '4. Replacing the Default HTML File',    
+	    solution4: 'After successfully installing the Hestia Server Panel, to further enhance the user experience and demonstrate your professionalism, we highly recommend replacing the default English HTML page with a customized style and version based on the needs and preferences of your target user group. This approach not only aligns your website visually and functionally with users\' cultural habits but also showcases your commitment to detail and user experience. Through localization and personalization, your website will leave a lasting impression on users, enhancing your brand image and user satisfaction. For customization, refer to <a href="https://hestiamb.org/docs/introduction/ssh.html#%E4%BF%AE%E6%94%B9hestia%E9%BB%98%E8%AE%A4html%E6%A8%A1%E6%9D%BF%E7%9A%84%E6%96%B9%E6%B3%95" target="_blank" rel="noopener noreferrer">Custom Pages</a>.',  
+	    copyCodeLabelPrompt: 'Please copy the following code: (NOTE: Click the copy button)',    
+	    copyCodeInstruction: 'Copy the above script command and execute it in your terminal. The script will automatically replace related files. (NOTE: It won\'t cause any crashes! Feel free to use it.)',  
+	    copyCodeButton: 'Copy',  
+	    copyCodeSuccessMessage: 'Copy Succeeded!',  
+	    currentTimetext: 'Current Time:',  
+	    footertext: 'Current Domain:',  
+	},
+	'de': {    
+	    successTitle: 'Erfolgreiche Zugriff!',  
+	    caption: '<h2>Willkommen in dem von dem Hestia Server Control Panel erstellten Website-Management-System.<br>Wenn Sie leidenschaftlich an technologischen Innovationen interessiert sind,<br> erwarten wir Ihre Teilnahme, um gemeinsam zur Entwicklung von Hestia beizutragen. Wenn Sie ein deutscher Benutzer sind,<br> besuchen Sie bitte unsere <a class="header-button" href="https://hestiamb.org" target="_blank">Chinesische Offizielle Website</a>,<br>oder zugreifen Sie auf unsere <a class="header-button" href="https://github.com/hestiacp/hestiacp" target="_blank">GitHub Repository</a>, um Ihren Code beizutragen. <br>Für tiefergehende Untersuchungen können Sie auch unsere Entwicklergemeinschaft anschauen und mit anderen Entwicklern ausfuhrlich diskutieren.<br> Bitte besuchen Sie unsere <a class="header-button" href="https://forum.hestiacp.com" target="_blank">Englische Gemeinschaftsforum</a>, um an Diskussionen teilzunehmen.</h2><h3>Unterhalb sind Lösungen für einige gemeinsame Probleme, um Ihnen zu helfen, schnell anzufangen und die Bequemlichkeit von Hestia zu geniessen (zum Referenz)</h3>',    
+	    headerProblem: 'Gemeinsame Probleme',    
+	    headerSolution: 'Lösungen',    
+	    problem1: '1. Anpassung von kundenspezifischen Seiten',    
+	    solution1: 'Bitte sehen Sie unsere offizielle Dokumentation. <a href="https://hestiacp.com/docs/introduction/getting-started" target="_blank">kundenspezifische Seiten</a>',    
+	    problem2: '2. Dateimanager Fehler',    
+	    solution2: 'Bitte sehen Sie unsere gemeinsame Fehlerbehandlungsseite <a href="https://hestiacp.com/docs/server-administration/troubleshooting" target="_blank" rel="noopener noreferrer">Fehlerbehandlung</a>',    
+	    problem3: '3. Dateiserver',    
+	    solution3: 'Wenn Sie eine Website erstellen, müssen Sie vielleicht einen gesonderten Dateiserver erstellen. Wir empfehlen die Verwendung von <a href="https://github.com/prasathmani/tinyfilemanager" target="_blank" rel="noopener noreferrer">Dateimanager</a>, welches hervorragende Leistungen in Dateimanagement bietet und einfach zu implementieren ist.',  
+	    problem4: '4. Ersetzen der Standard HTML Datei',    
+	    solution4: 'Nach erfolgreiche Installation von dem Hestia Server Panel, um die Benutzererfahrung weiter zu verbessern und Ihre Professionalität zu zeigen, empfehlen wir dringend, dass Sie die standard English HTML Seite durch eine kundenspezifische Art und Version ersetzen, basierend auf den Bedürfnissen und Vorlieben Ihrer Zielbenutzergruppe. Diese Vorgehensweise bringt nicht nur Ihre Website optisch und funktionell mit den kulturellen Gewohnheiten von Benutzern in Einklang, sondern zeigt auch Ihre Hingabe zu Details und Benutzererfahrung. Durch Lokalisierung und Personalisierung wird Ihre Website einen bleibenden Eindruck auf Benutzern hinterlassen, welches Ihre Markenimage und Benutzerzufriedenheit erhöht. Für kundenspezifische Inhalte können Sie <a href="https://hestiamb.org/docs/introduction/ssh.html#%E4%BF%AE%E6%94%B9hestia%E9%BB%98%E8%AE%A4html%E6%A8%A1%E6%9D%BF%E7%9A%84%E6%96%B9%E6%B3%95" target="_blank" rel="noopener noreferrer">kundenspezifische Seiten</a> zu Referenz nehmen.',  
+	    copyCodeLabelPrompt: 'Bitte kopieren Sie folgenden Code: (NOTE: Klicken Sie auf den Kopierknopf)',    
+	    copyCodeInstruction: 'Kopieren Sie den obigen Skriptbefehl und ausführen Sie ihn in Ihrem Terminal. Der Skript wird automatisch zugehörige Dateien ersetzen. (NOTE: Es wird keine Abstürze verursachen! Bitte gebrauchen Sie es getrost.)',  
+	    copyCodeButton: 'Kopieren',  
+	    copyCodeSuccessMessage: 'Kopieren erfolgreich!',  
+	    currentTimetext: 'Aktuelle Uhrzeit:', 
+	    footertext: 'Aktuelle Domain:',   
+	},
+	}; 
+  
+	function changeLanguage(lang) {  
+	    document.getElementById('success-title').textContent = langTexts[lang].successTitle; 
+	    document.getElementById('table-caption').innerHTML = langTexts[lang].caption;  
+	    document.getElementById('header-problem').textContent = langTexts[lang].headerProblem;  
+	    document.getElementById('header-solution').textContent = langTexts[lang].headerSolution;  
+	    document.getElementById('problem1').innerHTML = langTexts[lang].problem1;    
+	    document.getElementById('solution1').innerHTML = langTexts[lang].solution1;    
+	    document.getElementById('problem2').innerHTML = langTexts[lang].problem2;    
+	    document.getElementById('solution2').innerHTML = langTexts[lang].solution2;    
+	    document.getElementById('problem3').innerHTML = langTexts[lang].problem3;    
+	    document.getElementById('solution3').innerHTML = langTexts[lang].solution3;  
+	    document.getElementById('problem4').innerHTML = langTexts[lang].problem4;    
+	    document.getElementById('solution4').innerHTML = langTexts[lang].solution4;  		
+	    document.getElementById('copyCodeLabelPrompt').textContent = langTexts[lang].copyCodeLabelPrompt;
+	    document.getElementById('copyCodeInstruction').textContent = langTexts[lang].copyCodeInstruction; 
+         document.getElementById('currentTimetext').textContent = langTexts[lang].currentTimetext; // 注意这里使用了currentTimetext而不是currentTimetext，
+	    document.getElementById('copyCodeButton').textContent = langTexts[lang].copyCodeButton; // 更新复制按钮文本 
+	    document.getElementById('currentTimePrefix').textContent = langTexts[lang].currentTimePrefix;//当前时间
+	}
+
+   function updateDateTime() {  
+       const now = new Date();  
+       const options = {  
+           year: 'numeric',  
+           month: '2-digit',  
+           day: '2-digit',  
+           hour: '2-digit',  
+           minute: '2-digit',  
+           second: '2-digit',  
+           hour12: false  
+       };  
+       const formattedDateTime = now.toLocaleString('zh-CN', options);  
+       document.getElementById('currentDateTime').textContent = formattedDateTime;  
+	   }  
+	
+	   window.onload = function() {  
+	       updateDateTime();  
+	       setInterval(updateDateTime, 1000);  
+	       changeLanguage('zh-CN'); // 默认显示中文  
+	   };  
+    </script>  
+	<script>  
+	function copyCode(codeElementId) {    
+	var codeElement = document.getElementById(codeElementId);    
+	if (document.createRange && window.getSelection) {    
+		var range = document.createRange();    
+		range.selectNodeContents(codeElement);    
+		var selection = window.getSelection();    
+		selection.removeAllRanges();    
+		selection.addRange(range);    
+		  
+		try {    
+			var successful = document.execCommand('copy');    
+			var msg = successful ? '成功复制' : '复制失败';    
+			console.log(msg);    
+			// 如果需要，可以显示给用户一个提示  
+			alert(msg);  
+		} catch (err) {    
+			console.error('复制失败:', err);    
+		}    
+		  
+		window.getSelection().removeAllRanges();    
+	}    
+	}    
+	</script> 
+    <script>    
+        // 获取当前页面的协议（http或https）、主机名（域名）和端口（如果有）  
+        var protocol = window.location.protocol;  
+        var hostname = window.location.hostname;  
+        var port = window.location.port ? ':' + window.location.port : '';  
+          
+        // 假设我们想要尝试使用HTTPS（但请注意，这可能会失败，如果服务器不支持HTTPS）  
+        var rootUrl = 'https://' + hostname; // 默认使用HTTPS  
+          
+        // 如果当前页面不是HTTPS，并且你不想强制使用HTTPS，可以注释掉上面的行，并使用下面的行  
+        // var rootUrl = protocol + '//' + hostname + port;  
+          
+        // 显示根URL在链接中，并设置链接的href属性  
+        document.getElementById('rootUrlLink').textContent = rootUrl;  
+        document.getElementById('rootUrlLink').href = rootUrl;  
+    </script>  
+</body>  
+</html>

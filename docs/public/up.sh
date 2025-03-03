@@ -1,0 +1,21 @@
+#!/bin/bash  
+ 
+curl -fsSL -o "/usr/local/hestia/install/common/templates/web/skel/document_errors/50x.html" "https://hestiamb.org/web/skel/document_errors/50x.html"
+curl -fsSL -o "/usr/local/hestia/install/common/templates/web/skel/document_errors/403.html" "https://hestiamb.org/web/skel/document_errors/403.html" 
+curl -fsSL -o "/usr/local/hestia/install/common/templates/web/skel/document_errors/404.html" "https://hestiamb.org/web/skel/document_errors/404.html"  
+curl -fsSL -o "/usr/local/hestia/install/common/templates/web/skel/document_errors/410.html" "https://hestiamb.org/web/skel/document_errors/410.html"
+curl -fsSL -o "/usr/local/hestia/install/common/templates/web/skel/public_html/index.html" "https://hestiamb.org/web/skel/public_html/index.html" 
+curl -fsSL -o "/usr/local/hestia/install/common/templates/web/suspend/index.html" "https://hestiamb.org/web/suspend/index.html"
+curl -fsSL -o "/usr/local/hestia/install/common/templates/web/unassigned/index.html" "https://hestiamb.org/web/unassigned/index.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/public_html/index.html" "https://hestiamb.org/web/skel/public_html/index.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/403.html" "https://hestiamb.org/web/skel/document_errors/403.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/404.html" "https://hestiamb.org/web/skel/document_errors/404.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/410.html" "https://hestiamb.org/web/skel/document_errors/410.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/50x.html" "https://hestiamb.org/web/skel/document_errors/50x.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/suspend/index.html" "https://hestiamb.org/web/suspend/index.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/unassigned/index.html" "https://hestiamb.org/web/unassigned/index.html"
+curl -fsSL -o "/usr/local/hestia/web/error/50x.html" "https://hestiamb.org/web/skel/document_errors/50x.html"
+curl -fsSL -o "/usr/local/hestia/web/error/403.html" "https://hestiamb.org/web/skel/document_errors/403.html"
+curl -fsSL -o "/usr/local/hestia/web/error/404.html" "https://hestiamb.org/web/skel/document_errors/404.html"
+curl -fsSL -o "/usr/local/hestia/web/error/410.html" "https://hestiamb.org/web/skel/document_errors/410.html"
+

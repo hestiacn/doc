@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="https://hestiamb.org/web/skel/favicon.ico" type="image/x-icon">
+		<title>网站访问被暂停</title>
+		<style>
+			body {
+				background-color: #f5f5f5;
+				margin-top: 8%;
+				color: #5d5d5d;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+					"Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+					"Noto Color Emoji";
+				text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+				text-align: center;
+			}
+
+                   h1 {
+				font-size: 2.45em;
+				font-weight: 700;
+				color: #c92127;
+				letter-spacing: -0.02em;
+				margin-bottom: 30px;
+				margin-top: 30px;
+			}
+  
+                    h2 {  
+                  font-size: 1.85em;  
+                  font-weight: 700;  
+                  color: #c92127;  
+                  letter-spacing: -0.01em;  
+                  margin-bottom: 20px;  
+                  padding: 10px 0;  
+                  line-height: 1.5; 
+                 }  
+                 
+                     body {  
+                    font-family: Arial, sans-serif;  
+               }  
+               
+                 .festival {  
+                    color: red;  
+               }
+
+			.container {
+				width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			.animate__animated {
+				animation-duration: 1s;
+				animation-fill-mode: both;
+			}
+
+			.animate__fadeIn {
+				animation-name: fadeIn;
+			}
+
+			.info {
+				color: #5594cf;
+				fill: #5594cf;
+			}
+
+			.error {
+				color: #c92127;
+				fill: #c92127;
+			}
+
+			.warning {
+				color: #ffcc33;
+				fill: #ffcc33;
+			}
+
+			.success {
+				color: #5aba47;
+				fill: #5aba47;
+			}
+
+			.icon-large {
+				height: 132px;
+				width: 132px;
+			}
+
+			.description-text {
+				color: #c92127;
+				letter-spacing: -0.01em;
+				font-size: 1.25em;
+				line-height: 20px;
+			}
+
+			.footer {
+				margin-top: 40px;
+				font-size: 0.7em;
+			}
+	        .domain-info h2 {  
+	            display: inline-block;  
+	            margin: 0;  
+	            vertical-align: middle;  
+	        }  
+	  
+			.animate__delay-1s {
+				animation-delay: 1s;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			@media (max-width: 600px) {  
+                      h1 {  
+                     font-size: 2em; 
+                     }  
+                      h2 {  
+                     font-size: 1.5em;
+                      }  
+          } 
+          
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="animate__animated animate__fadeIn">
+						<svg
+							class="error icon-large fa-exclamation-circle"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"
+						>
+							<path
+								d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+							></path>
+						</svg>
+					</div>
+					<div class="container">  
+					<h1 class="animate__animated animate__fadeIn">此网站目前已暂停服务</h1>  
+					<h2 class="animate__animated animate__fadeIn animate__delay-1s">为了给您带来更好的体验和服务，我们暂时关闭了此网站以进行必要的维护和升级。</h2>  
+					<h2 class="animate__animated animate__fadeIn animate__delay-1s">在此期间，您将无法访问网站的所有功能。我们对此造成的不便深表歉意。</h2>  
+					<h2 class="animate__animated animate__fadeIn animate__delay-1s">请随时关注我们的公告，以获取网站恢复服务的最新信息。感谢您的理解和耐心等待。</h2>
+					<br><br><br>
+				     <h2 class="animate__animated animate__fadeIn animate__delay-3s">当前时间:公元<span id="currentDateTime"></span></h2>  
+				     <section class="footer">  
+				        <div class="domain-info">  
+				            <h2>当前域: </h2> <h2 id="domainName"></h2>  
+				        </div>  
+				     </section>  
+					<script>
+						function updateDateTime() {
+							const now = new Date();
+							const year = now.getFullYear();
+							const month = String(now.getMonth() + 1).padStart(2, '0');
+							const day = String(now.getDate()).padStart(2, '0');
+							const hour = String(now.getHours()).padStart(2, '0');
+							const minute = String(now.getMinutes()).padStart(2, '0');
+							const second = String(now.getSeconds()).padStart(2, '0');
+							const formattedDateTime = `${year}年${month}月${day}日 ${hour}:${minute}:${second}`;
+							document.getElementById('currentDateTime').textContent = formattedDateTime;
+						}
+						window.onload = function() {
+							updateDateTime();
+							setInterval(updateDateTime, 1000);
+						};
+					</script> 
+			        <script>  
+				        var url = window.location.href;  
+				          
+				        var domainPattern = /:\/\/(.[^/]+)/;  
+				        var match = url.match(domainPattern);  
+				          
+				        if (match && match[1]) {  
+				            document.getElementById('domainName').textContent = match[1];  
+				        } else {  
+				            document.getElementById('domainName').textContent = '无法获取域名';  
+				        }  
+				    </script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>获取当前域名</title>  
+</head>  
+<body>  
+  
+    <section class="footer">  
+        <strong>Domain:</strong> <span id="domainName"></span>  
+    </section>  
+    
+    <script>  
+        var url = window.location.href;  
+          
+        var domainPattern = /:\/\/(.[^/]+)/;  
+        var match = url.match(domainPattern);  
+          
+        if (match && match[1]) {  
+            document.getElementById('domainName').textContent = match[1];  
+        } else {  
+            document.getElementById('domainName').textContent = '无法获取域名';  
+        }  
+    </script>  
+</body>  
+</html>

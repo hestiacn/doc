@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN"> 
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="https://dns.hestiamb.org/skel/favicon.ico" type="image/x-icon"> 
+		<title>欢迎访问本站！</title> 
+		<style>
+			body {
+				background-color: #f5f5f5;
+				margin-top: 5%;
+				color: #5d5d5d;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+					"Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+					"Noto Color Emoji";
+				text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+				text-align: center;
+			}
+
+		     h1 {
+				font-size: 2.45em;
+				font-weight: 700;
+				color: #5aba47;
+				letter-spacing: -0.02em;
+				margin-bottom: 30px;
+				margin-top: 30px;
+			}
+
+                h2 {  
+                    font-size: 1.85em;
+                    font-weight: 700;  
+                    color: #5aba47; 
+                    letter-spacing: -0.01em; 
+                    margin-bottom: 20px; 
+                    margin-top: 20px;
+             }  
+                h3 {  
+                    font-size: 1.25em;
+                    font-weight: 700;  
+                    color: #5aba47; 
+                    letter-spacing: -0.01em; 
+                    margin-bottom: 10px; 
+                    margin-top: 10px;
+             }  			 
+                 p {  
+                    font-size: 1em; 
+                    font-weight: 400;
+                    color: #5aba47; 
+                    letter-spacing: normal;  
+                    margin-bottom: 15px; 
+                    margin-top: 0; 
+                    line-height: 1.5; 
+              }
+		        /* 添加一个新类来居中内容 */  
+		        .center-content {  
+		            display: flex;  
+		            justify-content: center; /* 水平居中 */  
+		            align-items: center; /* 垂直居中（如果需要的话）*/  
+		            flex-direction: column; /* 垂直堆叠内容 */  
+		            height: 100%; /* 如果需要垂直居中，确保容器有高度 */  
+		        } 
+                  pre {  
+                    background-color: #f5f5f5;  
+                    padding: 1em; 
+                    overflow: auto;   
+                    border-radius: 4px;  
+                    max-width: 100%; 
+                    box-sizing: border-box; 
+                  }
+                  code {  
+                    display: block; /* 如果需要的话，使代码块占据整个单元格宽度 */  
+                    background-color: inherit; /* 继承pre的背景色 */  
+                  }  
+                 body {  
+                    font-family: Arial, sans-serif;  
+                  } 
+                 .problem-column {  
+			    width: 50px; /* 或其他您想要的固定宽度 */  
+			  } 
+			  table { 
+			    max-width: 900px; /* 或其他您想要的固定宽度 */    
+			    width: 100%; /* 如果需要表格始终占据容器宽度，可以设置为100% */  
+			    margin: 0 auto; /* 水平居中 */    
+			    table-layout: fixed; /* 设置表格布局为固定宽度 */  
+			   } 
+			  th, td {  
+				padding: 10px; /* 单元格内边距 */
+				color: #5aba47;  
+				font-weight: bold;
+				text-align: left; /* 文本左对齐 */  
+				border-bottom: 1px solid #ddd; /* 可选：添加底部边框 */  
+			   }  
+		        th {    
+		            font-size: 1.2em; /* 或其他合适的字体大小 */   
+		            color: #5aba47;   
+		            padding: 10px;  
+		            text-align: left;  
+		            background-color: #f2f2f2;  
+		        }
+			/* 设置 tfoot 中所有非 code 元素的文本为粗体 */  
+			tfoot p, tfoot a, tfoot button {  
+			    font-weight: bold;
+			    text-align: center;    
+			} 
+			tfoot td {  
+			    text-align: center;  
+			}   
+			tfoot pre {  
+			    /* text-align: center; /* 通常不推荐对 pre 标签内的文本居中 */  
+			}
+               .festival {  
+                    color: red;  
+               } 
+               .custom-h2 {  
+                    font-size: 1.85em;
+                    font-weight: 700;  
+                    color: #5aba47;  
+                    letter-spacing: -0.01em; 
+                    margin-bottom: 20px; 
+                    margin-top: 20px;  
+               }
+               .custom-p {  
+                    font-size: 1em; 
+                    font-weight: 400;
+                    color: #5aba47; 
+                    fill: #5aba47; 
+                    letter-spacing: normal;  
+                    margin-bottom: 15px; 
+                    margin-top: 0; 
+                    line-height: 1.5; 
+              }
+
+			.container {
+				width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			.animate__animated {
+				animation-duration: 1s;
+				animation-fill-mode: both;
+			}
+
+			.animate__fadeIn {
+				animation-name: fadeIn;
+			}
+
+			.info {
+				color: #5594cf;
+				fill: #5594cf;
+			}
+
+			.error {
+				color: #c92127;
+				fill: #c92127;
+			}
+
+			.warning {
+				color: #ffcc33;
+				fill: #ffcc33;
+			}
+
+			.success {
+				color: #5aba47;
+				fill: #5aba47;
+			}
+
+			.icon-large {
+				height: 132px;
+				width: 132px;
+			}
+
+			.description-text {
+				color: #5aba47;
+				letter-spacing: -0.01em;
+				font-size: 1.25em;
+				line-height: 20px;
+			}
+
+			.footer {
+				margin-top: 40px;
+				font-size: 0.7em;
+			}
+
+			.animate__delay-1s {
+				animation-delay: 1s;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+		</style> 
+	</head>  
+	<body>  
+		<div class="container">
+			<div class="row">
+			 <div class="col center-content">
+				<div class="col">
+						<i class="success">
+							<svg
+								class="success icon-large fa-check-circle"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+							>
+								<path
+									d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+								></path>
+							</svg>
+						</i>
+						<h2>成功访问!</h2> 
+					</div> 
+					<div class="container">  
+                         <div class="row">  
+                         <div class="col center-content">
+					<table>  
+					    <caption><h2>本站使用<a href="https://cn.ubuntu.com" target="_blank" rel="noopener noreferrer">Ubuntu</a>服务器操作系统和<a href="https://hestiamb.org" target="_blank" rel="noopener noreferrer">Hestia</a>服务器控制面板搭建</h2></caption>
+						<thead>  
+							<tr>  
+								<th class="problem-column">步骤</th> <!-- 表头单元格 -->  
+								<th>说明</th> <!-- 表头单元格 --> 	
+							</tr>  
+						</thead>   
+						<tbody>  
+							<tr>  
+								<td>1</td>  
+								<td>将服务器操作系统安装为<a href="https://cn.ubuntu.com" target="_blank" rel="noopener noreferrer">Ubuntu</a>系统.</td>  
+							</tr>  
+							<tr>  
+								<td>2</td>  
+								<td>安装<a href="https://hestiamb.org" target="_blank" rel="noopener noreferrer">Hestia</a>服务器控制面板.</td>  
+							</tr>  
+							<tr>  
+								<td>3</td>  
+								<td>创建网站时，可能需要创建单独的文件服务器。推荐本站使用的<a href="https://fm.hestiamb.org/" target="_blank" rel="noopener noreferrer">文件管理器</a>.</td>  
+							</tr>  
+							<tr>  
+								<td>4</td>  
+								<td>Hestia服务器面板安装完成后默认文件为英文！想换成中文请完成第1、2步骤后，复制下面相应的服务器的脚本代码在服务器上执行，您如果需要自定义可参考<a href="https://hestiamb.org/docs/introduction/ssh.html#%E4%BF%AE%E6%94%B9hestia%E9%BB%98%E8%AE%A4html%E6%A8%A1%E6%9D%BF%E7%9A%84%E6%96%B9%E6%B3%95" target="_blank" rel="noopener noreferrer">修改Hestia默认HTML模板</a>。</td>  
+							</tr>  
+						</tbody>  
+						<tfoot>  
+							<tr>  
+								<td colspan="2">  
+									<p><a href="https://debian.org" target="_blank" rel="noopener noreferrer">Debian</a>服务器复制以下代码：(PS:点击复制按钮即可)</p>  
+									<pre><code id="debian-code">curl -fsSL https://dns.hestiamb.org/tihuan.sh | bash</code></pre>  
+									<button onclick="copyCode('debian-code')">复制</button>  
+								</td>  
+							</tr>  
+							<tr>  
+								<td colspan="2">  
+									<p><a href="https://cn.ubuntu.com" target="_blank" rel="noopener noreferrer">Ubuntu</a>服务器复制以下代码：(PS:点击复制按钮即可)</p>  
+									<pre><code id="ubuntu-code">curl -fsSL https://dns.hestiamb.org/utihuan.sh | bash</code></pre>  
+									<button onclick="copyCode('ubuntu-code')">复制</button>  
+									<br>
+									<br>
+									<br>
+									<p>复制上面的脚本命令并在你的终端中执行它，脚本会自动替换相关文件.(PS:不会造成崩溃！请放心使用)</p>  
+								</td> 
+						</tfoot>
+   	                    </table>
+				   <div class="center-content">  
+                      <h2>当前时间:<span id="currentDateTime"></span></h2>  
+                     </div>  
+				</div>  
+			</div>  
+		</div> 
+	<script>  
+        function updateDateTime() {  
+            const now = new Date();  
+            const options = {  
+                year: 'numeric',  
+                month: '2-digit',  
+                day: '2-digit',  
+                hour: '2-digit',  
+                minute: '2-digit',  
+                second: '2-digit',  
+                hour12: false  
+            };  
+            const formattedDateTime = now.toLocaleString('zh-CN', options);  
+            document.getElementById('currentDateTime').textContent = formattedDateTime;  
+        }  
+        
+        window.onload = function() {  
+            updateDateTime();  
+  
+            setInterval(updateDateTime, 1000);  
+        };  
+    </script>   
+		<script>  
+		function copyCode(codeElementId) {    
+		var codeElement = document.getElementById(codeElementId);    
+		if (document.createRange && window.getSelection) {    
+			var range = document.createRange();    
+			range.selectNodeContents(codeElement);    
+			var selection = window.getSelection();    
+			selection.removeAllRanges();    
+			selection.addRange(range);    
+			  
+			try {    
+				var successful = document.execCommand('copy');    
+				var msg = successful ? '成功复制' : '复制失败';    
+				console.log(msg);    
+				// 如果需要，可以显示给用户一个提示  
+				alert(msg);  
+			} catch (err) {    
+				console.error('复制失败:', err);    
+			}    
+			  
+			window.getSelection().removeAllRanges();    
+		}    
+	}    
+		</script> 
+	</body>  
+	</html>

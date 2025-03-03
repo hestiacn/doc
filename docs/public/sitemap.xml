@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://hestiamb.org/</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/features</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/install</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/introduction/getting-started</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/team</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/donate</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/changelog</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/contribute</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/strategies</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/contributing/development</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/contributing/quick-install-app</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/rclone</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/introduction/best-practices</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/introduction/hestia</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/account</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/backups</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/cron-jobs</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/databases</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/dns</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/file-manager</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/mail-domains</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/notifications</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/packages</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/statistics</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/users</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/user-guide/web-domains</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/introduction/demo</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/introduction/ssh</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/community/archive</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/backup-restore</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/configuration</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/customisation</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/databases</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/dns</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/email</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/file-manager</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/firewall</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/os-upgrades</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/rest-api</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/ssl-certificates</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/web-templates</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/server-administration/troubleshooting</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/contributing/building</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/contributing/documentation</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/contributing/testing</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/contributing/translations</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/community/hestia-nginx-cache</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/community/ioncube-hestia-installer</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/community/install-script-generator</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/api</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/clijieshao</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/cli</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/RRD</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/firewall</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/mailmanagement</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/softwarepackage</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/selfsignedcertificate</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/directory</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/server</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/document</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/filemanager</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/folder</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/search</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/recover</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/key</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/backup</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/hash</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/useradministration</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/website</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/renewsslcertificate</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/ssh</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/php</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/phpMyAdmin</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/database</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/apacheandnginx</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/ip</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/hetiapanel</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/ftps</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/dns</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/cron</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/apis</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/2FAtoken</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/reference/bug</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/docs/introduction/locale</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/shili</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://hestiamb.org/bin/hooks/instll</loc>
+  <lastmod>2025-03-03T16:43:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>

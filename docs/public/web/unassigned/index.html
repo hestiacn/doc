@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN"> 
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="https://hestiamb.org/web/skel/favicon.ico" type="image/x-icon">
+		<title>欢迎访问本站！</title> 
+    <style>  
+		body {  
+		    background-color: #f5f5f5;  
+		    margin-top: 5%;  
+		    color: #5d5d5d;  
+		    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  
+		    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);  
+		    text-align: center;  
+		}  
+		h1 {  
+		    font-size: 2.45em;  
+		    font-weight: 700;  
+		    color: #5aba47;  
+		    letter-spacing: -0.02em;  
+		    margin-bottom: 30px;  
+		    margin-top: 30px;  
+		}  
+		h2 {    
+		    font-size: 1.85em;  
+		    font-weight: 700;    
+		    color: #5aba47;   
+		    letter-spacing: -0.01em;   
+		    margin-bottom: 20px;   
+		    margin-top: 20px;  
+		}      
+		h3 {      
+		    font-size: 1.5em; 
+		    font-weight: bold;   
+		    color: #5aba47;  
+		    margin-bottom: 10px;
+		    text-align: center; 
+		}  
+		p {    
+		    font-size: 1em;   
+		    font-weight: 400;  
+		    color: #5aba47;   
+		    letter-spacing: normal;    
+		    margin-bottom: 15px;   
+		    margin-top: 0;   
+		    line-height: 1.5;   
+		}  
+		 
+		.center-content {    
+		    display: flex;    
+		    justify-content: center;
+		    align-items: center; 
+		    flex-direction: column;  
+		    height: 100%;   
+		}   
+		 
+		tfoot td {  
+		    text-align: center;  
+		}  
+		
+		tfoot pre, tfoot code {  
+		    text-align: left;
+		    display: inline-block; 
+		    margin: 0 auto;  
+		}  
+		
+		tfoot p, tfoot button {  
+		    margin: 0 auto; 
+		    font-weight: bold;
+		}
+		pre {    
+		    background-color: #f5f5f5;    
+		    padding: 1em;   
+		    overflow: auto;     
+		    border-radius: 4px;    
+		    max-width: 100%;   
+		    box-sizing: border-box;   
+		}  
+		code {    
+		    display: block;   
+		    background-color: inherit;    
+		}    
+		  
+		.problem-column {    
+		    width: 200px;  
+		}   
+		table {   
+		    max-width: 900px;  
+		    width: 100%;
+		    margin: 0 auto;      
+		    table-layout: fixed;   
+		}  
+		th, td {    
+		    padding: 10px;  
+		    color: #5aba47;    
+		    font-weight: bold;  
+		    text-align: left;
+		    border-bottom: 1px solid #ddd;  
+		}    
+		th {      
+		    font-size: 1.5em; 
+		    color: #5aba47;     
+		    padding: 10px;    
+		    text-align: left;    
+		    background-color: #f2f2f2;    
+		}  
+		.language-selector button {    
+		    margin: 0 5px;    
+		    padding: 5px 10px;    
+		    background-color: #5aba47;    
+		    color: white;    
+		    border: none;    
+		    cursor: pointer;    
+		}    
+		.table-caption {    
+		    text-align: center;    
+		}   
+		#currentDateTimeContainer {    
+		    margin-top: 20px;    
+		    text-align: center;    
+		}   
+		#currentTimetext {  
+		    display: inline-block;  
+		    font-size: 1.5em;
+		    font-weight: bold;
+		    margin-right: 5px; 
+		}  
+		#currentDateTime {    
+		    font-size: 1.5em;
+		    color: #5aba47;   
+		}
+		#footerContainer {    
+		    margin-top: 20px;    
+		    text-align: center;    
+		} 
+		#footertext {  
+		    display: inline-block;  
+		    font-size: 1.5em; 
+		    font-weight: bold;
+		    margin-right: 5px;
+		}  
+		.festival {    
+		    color: red;    
+		}   
+		.custom-h2 {    
+		    font-size: 1.85em;  
+		    font-weight: 700;    
+		    color: #5aba47;    
+		    letter-spacing: -0.01em;   
+		    margin-bottom: 20px;   
+		    margin-top: 20px;    
+		}  
+		.custom-p {    
+		    font-size: 1em;   
+		    font-weight: 400;  
+		    color: #5aba47;   
+		    fill: #5aba47;   
+		    letter-spacing: normal;    
+		    margin-bottom: 15px;   
+		    margin-top: 0;   
+		    line-height: 1.5;   
+		}  
+		.container {  
+		    width: 100%;  
+		    margin-right: auto;  
+		    margin-left: auto;  
+		}  
+		.animate__animated {  
+		    animation-duration: 1s;  
+		    animation-fill-mode: both;  
+		}  
+		.animate__fadeIn {  
+		    animation-name: fadeIn;  
+		}  
+		.info {  
+		    color: #5594cf;  
+		    fill: #5594cf;  
+		}  
+		.error {  
+		    color: #c92127;  
+		    fill: #c92127;  
+		}  
+		.warning {  
+		    color: #ffcc33;  
+		    fill: #ffcc33;  
+		}  
+		.success {  
+		    color: #5aba47;  
+		    fill: #5aba47;  
+		}  
+		.icon-large {  
+		    height: 132px;  
+		    width: 132px;  
+		    fill: currentColor; 
+		}  
+		.description-text {  
+		    color: #5aba47;  
+		    letter-spacing: -0.01em;  
+		    font-size: 1.25em;  
+		    line-height: 20px;  
+		}  
+
+		.footer {  
+		    display: flex;
+		    align-items: center; 
+		    margin-top: 40px;  
+		    font-size: 0.7em;  
+		}  
+		  
+	    .footer .footer-heading {    
+	        margin-right: 5px;
+	    }    
+	    
+	    .footer .footer-link {    
+	        font-size: 16px;
+	    }  
+		.animate__delay-1s {  
+		    animation-delay: 1s;  
+		}  
+		@keyframes fadeIn {  
+		    from {  
+		        opacity: 0;  
+		    }  
+		    to {  
+		        opacity: 1;  
+		    }  
+		}
+		
+		th, td {  
+		    font-size: 1em;
+		}  
+		  
+		@media screen and (max-width: 600px) {  
+		    th, td {  
+		        font-size: 0.8em;  
+		    }  
+		    table {  
+		        width: 100%;  
+		    }  
+		    th {  
+		        word-wrap: break-word;  
+		    }  
+		}  
+		  
+		@media (max-width: 768px) {  
+		    h2 {  
+		        font-size: 1.5em;
+		    }  
+		    h3 {  
+		        font-size: 1.2em;
+		    }  
+		    .problem-column {  
+		        width: 80px;
+		    }  
+		}  
+		   
+		@media (max-width: 480px) {  
+		    h2 {  
+		        font-size: 1.3em;  
+		    }  
+		    h3 {  
+		        font-size: 1em;  
+		    }  
+		}  
+    </style>  
+</head>  
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col center-content">
+					<div class="col"><svg class="success icon-large fa-check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></div> 
+					<h1 id="success-title"></h1> 
+					<div class="language-selector">
+						<button onclick="changeLanguage('zh-CN')">中文</button>
+						<button onclick="changeLanguage('en')">English</button>
+						<button onclick="changeLanguage('de')">Deutsch</button>
+						<button onclick="changeLanguage('ko')">한국어</button>
+						<button onclick="changeLanguage('vi')">Tiếng Việt</button>
+					</div>
+					<table>
+						<caption id="table-caption"></caption> 
+						<thead>
+							<tr>
+								<th class="problem-column" id="header-problem"></th>
+								<th id="header-solution"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td id="problem1"></td>
+								<td id="solution1"></td>
+							</tr>
+							<tr>
+								<td id="problem2"></td>
+								<td id="solution2"></td>
+							</tr>
+							<tr>
+								<td id="problem3"></td>
+								<td id="solution3"></td>
+							</tr>
+							<tr>
+								<td id="problem4"></td>
+								<td id="solution4"></td>
+							</tr>
+							<tr>
+								<td colspan="2" id="currentDateTimeContainer">
+									<p id="currentTimetext"></p>
+									<span id="currentDateTime"></span>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" id="footerContainer">
+									<h3 id="footertext"></h3>
+									<a id="rootUrlLink" href="#" target="_blank" class="footer-link">加载中...</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div> 
+    <script>  
+	const langTexts = {  
+      'zh-CN': {  
+    	successTitle: '成功访问!',
+        caption: '<h2>欢迎来到 Hestia 服务器控制面板！如看到此页面意味着 Hestia 已成功安装。如果您是中文用户请访问<a class="header-button" href="https://hestiamb.org" target="_blank">中文官网</a>进行文档查阅。如果您是英文用户请访问<a class="header-button" href="https://hestiacp.com" target="_blank">英文官网</a>进行文档查阅。对于热衷于技术革新的朋友们，我们诚邀您加入我们的社区，共同推动 Hestia 的发展.访问<a class="header-button" href="https://github.com/hestiacp/hestiacp" target="_blank">GitHub仓库</a>,贡献您的代码.或访问<a class="header-button" href="https://forum.hestiacp.com" target="_blank">英文社区论坛</a>参与讨论，（注意：请使用英文提问.）</h2><h3>以下提供了一些常见问题的解决方案，助您快速上手并畅享Hestia带来的便利(请参考)</h3>',  
+        headerProblem: '常见问题',  
+        headerSolution: '解决方案',  
+	   problem1: '1. 自定义页面的修改',
+	   solution1: '若访问主机管理域时出现异常，请查阅<a href="https://hestiamb.org/docs/introduction/hostdomain.html" target="_blank">主机域访问异常指南</a>。关于如何修改自定义页面，请参考我们的<a href="https://hestiamb.org/docs/introduction/defaultpage.html" target="_blank">官方文档</a>。',
+	
+	   problem2: '2. 文件管理器故障',
+	   solution2: '如遇文件管理器错误，请访问我们的<a href="https://hestiamb.org/docs/introduction/ssh.html" target="_blank" rel="noopener noreferrer">常见错误处理页面</a>获取帮助。',
+	
+	   problem3: '3. 文件服务器的设置',
+	   solution3: '在创建网站时，可能需要配置独立的文件服务器。我们推荐使用<a href="https://fm.hestiamb.org" target="_blank" rel="noopener noreferrer">TinyFileManager</a>，它性能卓越且部署简便。',
+	
+	   problem4: '4. 恢复默认页面显示',
+	   solution4: '如需将当前页面恢复为默认英文页面，请参考<a href="https://hestiamb.org/docs/introduction/switch.html" target="_blank" rel="noopener noreferrer">切换为默认英文指南</a>。若您对本页面有改进建议，欢迎在<a href="https://github.com/hestiacn" target="_blank" rel="noopener noreferrer">GitHub</a>上联系我们。',
+ 	   currentTimetext: '当前时间:公元',  
+ 	   footertext: '当前域:',  
+    },  
+	'en': {    
+	    successTitle: 'Successful Access!',  
+	    caption: '<h2>Welcome to the Hestia Server Control Panel. Seeing this page means that Hestia has been successfully installed! If you are a Chinese user, please visit <a class="header-button" href="https://hestiamb.org" target="_blank">Chinese Official Website</a>. If you are an English user, please visit <a class="header-button" href="https://hestiacp.com" target="_blank">English Official Website</a>. If you are passionate about technological innovation, we look forward to your joining the community to contribute to the development of Hestia. Visit <a class="header-button" href="https://github.com/hestiacp/hestiacp" target="_blank">GitHub Repository</a> to contribute your code, or visit <a class="header-button" href="https://forum.hestiacp.com" target="_blank">English Community Forum</a> to participate in discussions. Please ask questions in English.</h2><h3>Below are some common solutions to help you get started quickly and enjoy the convenience brought by Hestia (please refer to them).</h3>',    
+	    headerProblem: 'Common Problems',    
+	    headerSolution: 'Solutions (Some content only supports Chinese. If you are a user of other languages, please use your browser to translate it into the language you need.)',    
+	    problem1: '1. Modifying Custom Pages',    
+	    solution1: 'If you encounter an exception when accessing the host management domain, please refer to <a href="https://hestiamb.org/docs/introduction/hostdomainen.html" target="_blank">Host domain access exception</a>. Please check our official documentation. <a href="https://hestiamb.org/docs/introduction/defaultpageen.html" target="_blank">Custom page</a>.',    
+	    problem2: '2. File Manager Error',    
+	    solution2: 'Please refer to our common troubleshooting page <a href="https://hestiacp.com/docs/server-administration/troubleshooting" target="_blank" rel="noopener noreferrer">Troubleshooting</a>',    
+	    problem3: '3. File Server',    
+	    solution3: 'When creating a website, you may need to create a separate file server. We recommend using <a href="https://github.com/prasathmani/tinyfilemanager" target="_blank" rel="noopener noreferrer">File Manager</a>, which excels in file management and is simple to deploy.',  
+	    problem4: '4. About Modifying the Default Page Display',    
+	    solution4: 'If you need to change the default page display language, please modify the source code line 465 and the date format line 458 and replace them with the language options you need. Default options are (vi ko zh-CN de en).If you need to switch this page to the default English page, please see <a href="https://hestiamb.org/docs/introduction/switch.html" target="_blank" rel="noopener noreferrer">Switch to default English</a>. If you have better suggestions for this page, please contact <a href="https://github.com/hestiacn" target="_blank" rel="noopener noreferrer">GitHub</a>.',  
+	    currentTimetext: 'Current Time:',    
+	    footertext: 'Current Domain:',    
+	},
+	'de': {    
+	    successTitle: 'Erfolgreicher Zugriff!',  
+	    caption: '<h2>Willkommen zum Hestia Server Control Panel. Wenn Sie diese Seite sehen, bedeutet das, dass Hestia erfolgreich installiert wurde! Wenn Sie chinesischer Benutzer sind, besuchen Sie bitte die <a class="header-button" href="https://hestiamb.org" target="_blank">chinesische Offizielle Website</a>. Wenn Sie englischer Benutzer sind, besuchen Sie bitte die <a class="header-button" href="https://hestiacp.com" target="_blank">englische Offizielle Website</a>. Wenn Sie leidenschaftlich über technologische Innovationen sind, freuen wir uns darauf, Sie in der Community zu einem, um Hestia zu unterstützen. Besuchen Sie das <a class="header-button" href="https://github.com/hestiacp/hestiacp" target="_blank">GitHub Repository</a>, um Ihren Code beizusteuern, oder besuchen Sie das <a class="header-button" href="https://forum.hestiacp.com" target="_blank">englische Community Forum</a>, um an der Diskussion teilzunehmen. Bitte stellen Sie Ihre Fragen auf Englisch.</h2><h3>Unten sind einige häufige Lösungen, die Ihnen dabei helfen sollen, schnell loszulegen und die Vorteile von Hestia zu genießen (bitte beachten).</h3>',    
+	    headerProblem: 'Gemeinsame Probleme',    
+	    headerSolution: 'Lösungen (Teilweise Inhalte sind nur auf Chinesisch verfügbar. Wenn Sie Benutzer einer anderen Sprache sind, verwenden Sie bitte Ihren Browser, um sie in die Sprache Ihrer Wahl zu übersetzen.)',    
+	    problem1: '1. Anpassung kundenspezifischer Seiten',    
+	    solution1: 'Informationen zu Ausnahmen beim Zugriff auf die Host-Verwaltungsdomäne finden Sie in unserer <a href="https://hestiamb.org/docs/introduction/hostdomainen.html" target="_blank">Hostdomänen-Zugriffsausnahme</a> offizielle Dokumentation. <a href="https://hestiamb.org/docs/introduction/defaultpageen.html" target="_blank">Benutzerdefinierte Seite</a>.',    
+	    problem2: '2. Dateimanagerfehler',    
+	    solution2: 'Bitte sehen Sie sich unsere gemeinsame Fehlerbehandlungsseite an <a href="https://hestiacp.com/docs/server-administration/troubleshooting" target="_blank" rel="noopener noreferrer">Fehlerbehandlung</a>',    
+	    problem3: '3. Dateiserver',    
+	    solution3: 'Bei der Erstellung einer Website müssen Sie möglicherweise einen separaten Dateiserver erstellen. Wir empfehlen die Verwendung von <a href="https://github.com/prasathmani/tinyfilemanager" target="_blank" rel="noopener noreferrer">Dateimanager</a>, der sich durch hervorragende Dateiverwaltung und einfache Bereitstellung auszeichnet.',  
+	    problem4: '4. Änderung der Standardseitenanzeige',    
+	    solution4: 'Wenn Sie die Standardsprache für die Seitenanzeige ändern müssen, ändern Sie bitte Zeile 465 des Quellcodes und Datumsformatzeile 458 und ersetzen Sie sie durch die gewünschte Sprachoption. Standardoptionen sind (vi ko zh-CN de en).Wenn Sie diese Seite auf die standardmäßige englische Seite umstellen müssen, lesen Sie bitte <a href="https://hestiamb.org/docs/introduction/switch.html" target="_blank" rel="noopener noreferrer">Auf standardmäßiges Englisch umstellen </a >. Wenn Sie Verbesserungsvorschläge für diese Seite haben, kontaktieren Sie bitte <a href="https://github.com/hestiacn" target="_blank" rel="noopener noreferrer">GitHub</a>.',  
+	    currentTimetext: 'Aktuelle Uhrzeit:',    
+	    footertext: 'Aktuelle Domain:',    
+	},
+	'ko': {    
+	    successTitle: '성공적 접속!',  
+	    caption: '<h2>Hestia 서버 제어판에 오신 것을 환영합니다. 이 페이지를 볼 수 있다는 것은 Hestia가 성공적으로 설치되었음을 의미합니다! 중국 사용자이시면 <a class="header-button" href="https://hestiamb.org" target="_blank">중국어 공식 웹사이트</a>를 방문해주세요. 영어 사용자이시면 <a class="header-button" href="https://hestiacp.com" target="_blank">영어 공식 웹사이트</a>를 방문해주세요. 기술 혁신에 열정이 있다면, Hestia의 발전에 기여하기를期待합니다. <a class="header-button" href="https://github.com/hestiacp/hestiacp" target="_blank">GitHub 저장소</a>를 방문하여 코드를 기여하거나 <a class="header-button" href="https://forum.hestiacp.com" target="_blank">영어 커뮤니티 포럼</a>에 참여하여 논의에 참여해주세요. 질문은 영어로 해주세요.</h2><h3>아래는 몇 가지 일반적인 해결 방법을 제공하여 Hestia가 가져다주는 편리함을 빠르게 즐기고 시작하시기 바랍니다(참고하시기 바랍니다).</h3>',    
+	    headerProblem: '공통 문제',    
+	    headerSolution: '솔루션(부분 콘텐츠는 중국어로만 제공됩니다. 다른 언어를 사용하는 경우 브라우저를 사용하여 원하는 언어로 번역하시기 바랍니다.)',    
+	    problem1: '1. 사용자 정의 페이지 수정',    
+	    solution1: '호스트 관리 도메인 접속 시 예외 사항은 <a href="https://hestiamb.org/docs/introduction/hostdomainen.html" target="_blank">호스트 도메인 접속 예외 사항</a>을 확인하세요. 공식 문서 . <a href="https://hestiamb.org/docs/introduction/defaultpageen.html" target="_blank">맞춤 페이지</a>.',    
+	    problem2: '2. 파일 관리자 오류',    
+	    solution2: '공통 오류 처리 페이지를 참조하세요. <a href="https://hestiamb.org/docs/introduction/ssh.html" target="_blank" rel="noopener noreferrer">오류 처리</a>',    
+	    problem3: '3. 파일 서버',    
+	    solution3: '웹사이트를 생성할 때 별도의 파일 서버를 생성해야 할 수 있습니다. <a href="https://github.com/prasathmani/tinyfilemanager" target="_blank" rel="noopener noreferrer">파일 관리자</a>를 권장합니다. 파일 관리에 탁월한 성능을 제공하며 배포가 간단합니다.',  
+	    problem4: '4. 기본 페이지 표시 수정',    
+	    solution4: '기본 페이지 표시 언어를 수정해야 하는 경우 소스 코드의 465행과 날짜 형식 458행을 수정하고 필요한 언어 옵션으로 바꾸십시오. 기본 옵션은 (vi ko zh-CN de en) 입니다.이 페이지를 기본 영어 페이지로 전환해야 하는 경우 <a href="https://hestiamb.org/docs/introduction/switch.html" target="_blank" rel="noopener noreferrer">기본 영어로 전환을 참조하세요. </a >. 이 페이지에 대한 더 나은 제안이 있으면 <a href="https://github.com/hestiacn" target="_blank" rel="noopener noreferrer">GitHub</a>에 연락하십시오.',  
+	    currentTimetext: '현재 시간:',    
+	    footertext: '현재 도메인:',    
+	},
+	  'vi': {
+	    successTitle: 'Truy cập thành công!',
+	    caption: '<h2>Chào mừng bạn đến với Bảng điều khiển Hestia Server. Việc bạn có thể nhìn thấy trang này chứng tỏ rằng Hestia đã được cài đặt thành công! Nếu bạn là người dùng tiếng Trung, vui lòng truy cập <a class="header-button" href="https://hestiamb.org" target="_blank">trang chủ tiếng Trung</a>. Nếu bạn là người dùng tiếng Anh, vui lòng truy cập <a class="header-button" href="https://hestiacp.com" target="_blank">trang chủ tiếng Anh</a>. Nếu bạn đam mê về sự đổi mới công nghệ, chúng tôi rất mong bạn tham gia cộng đồng, cùng đóng góp sức mạnh cho sự phát triển của Hestia. Hãy truy cập <a class="header-button" href="https://github.com/hestiacp/hestiacp" target="_blank">kho lưu trữ GitHub</a> để đóng góp mã nguồn của bạn, hoặc truy cập <a class="header-button" href="https://forum.hestiacp.com" target="_blank">diễn đàn cộng đồng tiếng Anh</a> để tham gia thảo luận. Vui lòng đặt câu hỏi bằng tiếng Anh.</h2><h3>Dưới đây là một số giải pháp thường gặp, giúp bạn nhanh chóng bắt tay vào và tận hưởng những tiện lợi mà Hestia mang lại (xin vui lòng tham khảo).</h3>',
+	    headerProblem: 'Các vấn đề thường gặp',
+	    headerSolution: 'Các giải pháp (Một số nội dung chỉ hỗ trợ xem bằng tiếng Trung. Nếu bạn là người dùng ngôn ngữ khác xin sử dụng trình duyệt dịch sang ngôn ngữ bạn cần.)',
+	    problem1: '1. Sửa đổi trang tùy chỉnh',
+	    solution1: 'Để biết các trường hợp ngoại lệ khi truy cập miền quản lý máy chủ, vui lòng xem <a href="https://hestiamb.org/docs/introduction/hostdomainen.html" target="_blank">Ngoại lệ truy cập miền máy chủ</a>. tài liệu chính thức. <a href="https://hestiamb.org/docs/introduction/defaultpageen.html" target="_blank">Trang tùy chỉnh</a>.',
+	    problem2: '2. Lỗi trình quản lý tập tin',
+	    solution2: 'Xin vui lòng tham khảo trang xử lý lỗi thường gặp của chúng tôi <a href="https://hestiamb.org/docs/introduction/ssh.html" target="_blank" rel="noopener noreferrer">Xử lý lỗi</a>',
+	    problem3: '3. Máy chủ tập tin',
+	    solution3: 'Khi tạo trang web, bạn có thể cần tạo một máy chủ tập tin riêng biệt. Chúng tôi khuyên bạn sử dụng <a href="https://github.com/prasathmani/tinyfilemanager" target="_blank" rel="noopener noreferrer">Trình quản lý tập tin</a>, nó hoạt động xuất sắc trong quản lý tập tin và triển khai đơn giản.',
+	    problem4: '4. Về sửa đổi trang mặc định',
+	    solution4: 'Nếu bạn cần sửa đổi ngôn ngữ hiển thị trang mặc định, vui lòng sửa đổi dòng 465 của mã nguồn và dòng định dạng ngày 458 và thay thế bằng tùy chọn ngôn ngữ bạn cần. thay thế bằng ngôn ngữ bạn muốn (vi ko zh-CN de en).Nếu bạn cần chuyển trang này sang trang tiếng Anh mặc định, vui lòng xem <a href="https://hestiamb.org/docs/introduction/switch.html" target="_blank" rel="noopener noreferrer">Chuyển sang tiếng Anh mặc định </a>. Nếu bạn có bất kỳ gợi ý tốt nào cho trang này, xin vui lòng liên hệ <a href="https://github.com/hestiacn" target="_blank" rel="noopener noreferrer">GitHub</a>.',
+	    currentTimetext: 'Thời gian hiện tại:',
+	    footertext: 'Tên miền hiện tại:',
+	  },		
+	}; 
+  
+	function changeLanguage(lang) {
+		document.getElementById('success-title').textContent = langTexts[lang].successTitle; 
+		document.getElementById('table-caption').innerHTML = langTexts[lang].caption;  
+		document.getElementById('header-problem').textContent = langTexts[lang].headerProblem;  
+		document.getElementById('header-solution').textContent = langTexts[lang].headerSolution;  
+		document.getElementById('problem1').innerHTML = langTexts[lang].problem1;    
+		document.getElementById('solution1').innerHTML = langTexts[lang].solution1;    
+		document.getElementById('problem2').innerHTML = langTexts[lang].problem2;    
+		document.getElementById('solution2').innerHTML = langTexts[lang].solution2;    
+		document.getElementById('problem3').innerHTML = langTexts[lang].problem3;    
+		document.getElementById('solution3').innerHTML = langTexts[lang].solution3;  
+		document.getElementById('problem4').innerHTML = langTexts[lang].problem4;    
+		document.getElementById('solution4').innerHTML = langTexts[lang].solution4; 		
+		document.getElementById('currentTimetext').textContent = langTexts[lang].currentTimetext;
+		document.getElementById('footertext').textContent = langTexts[lang].footertext;
+	}
+
+	function updateDateTime() {
+		const now = new Date();
+		const year = now.getFullYear();
+		const month = String(now.getMonth() + 1).padStart(2, '0');
+		const day = String(now.getDate()).padStart(2, '0');
+		const hour = String(now.getHours()).padStart(2, '0');
+		const minute = String(now.getMinutes()).padStart(2, '0');
+		const second = String(now.getSeconds()).padStart(2, '0');
+		const currentTimetext = document.getElementById('currentTimetext').textContent;
+		const formattedDateTime = `${currentTimetext} ${year}年${month}月${day}日 ${hour}:${minute}:${second}`;
+		document.getElementById('currentDateTime').textContent = `${year}年${month}月${day}日 ${hour}:${minute}:${second}`;
+	}
+
+	window.onload = function() {
+		updateDateTime();
+		setInterval(updateDateTime, 1000);
+		changeLanguage('zh-CN');
+	};
+</script> 
+
+<script>
+	var protocol = window.location.protocol;
+	var hostname = window.location.hostname;
+	var port = window.location.port ? ':' + window.location.port : '';
+	var rootUrl = protocol + '//' + hostname + port;
+	document.getElementById('rootUrlLink').textContent = rootUrl;
+	document.getElementById('rootUrlLink').href = rootUrl;
+</script>
+</body>  
+</html>

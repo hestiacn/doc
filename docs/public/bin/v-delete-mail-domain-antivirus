@@ -1,0 +1,61 @@
+#!/bin/bash  
+  
+# 脚本信息：删除邮件域名的反病毒支持  
+  
+# 选项：USER DOMAIN  
+  
+# 示例：v-delete-mail-domain-antivirus admin mydomain.tld  
+  
+# 此脚本用于禁用邮件域名的 ClamAV 反病毒扫描功能。  
+  
+# 获取用户名和域名参数  
+user=$1  
+domain=$2  
+  
+# 加载 HestiaCP 的配置文件和函数库  
+source /etc/hestiacp/hestia.conf  
+source $HESTIA/func/main.sh  
+source $HESTIA/func/domain.sh  
+source_conf "$HESTIA/conf/hestia.conf"  
+  
+# 格式化域名和国际化域名  
+format_domain  
+format_domain_idn  
+  
+# 检查参数数量是否正确  
+check_args '2' "$#" 'USER DOMAIN'  
+  
+# 检查用户名和域名的格式是否有效  
+is_format_valid 'user' 'domain'  
+  
+# 检查邮件系统是否启用  
+is_system_enabled "$MAIL_SYSTEM" 'MAIL_SYSTEM'  
+  
+# 检查用户对象是否有效且未挂起  
+is_object_valid 'user' 'USER' "$user"  
+is_object_unsuspended 'user' 'USER' "$user"  
+  
+# 检查邮件域名对象是否有效且未挂起  
+is_object_valid 'mail' 'DOMAIN' "$domain"  
+is_object_unsuspended 'mail' 'DOMAIN' "$domain"  
+  
+# 检查邮件域名是否包含反病毒设置  
+is_object_value_exist 'mail' 'DOMAIN' "$domain" '$ANTIVIRUS'  
+  
+# 检查是否启用了只读模式  
+check_hestia_demo_mode  
+  
+# 删除反病毒标志文件  
+if [[ "$MAIL_SYSTEM" =~ exim ]]; then  
+    rm -f $HOMEDIR/$user/conf/mail/$domain/antivirus  
+fi  
+  
+# 在配置中禁用反病毒扫描  
+update_object_value 'mail' 'DOMAIN' "$domain" '$ANTIVIRUS' 'no'  
+  
+# 记录日志  
+$BIN/v-log-action "$user" "Info" "Mail" "Anti-virus scanning disabled (Domain: $domain)."
+log_event "$OK" "$ARGUMENTS"  
+  
+# 脚本执行完毕，退出  
+exit
