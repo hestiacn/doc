@@ -4,10 +4,7 @@
 
 <h2 align="center">适用于现代网络的轻量级且功能强大的服务器控制面板</h2>
 
-<p align="center">
-  <strong>最新稳定版本:${{version}}</strong> . | 
-  <a href="docs/changelog.md">查看更新日志</a>
-</p>
+<p align="center"><strong>最新稳定版本:</strong>1.9.3 | <a href="docs/changelog.md">查看更新日志</a></p>
 
 <p align="center">
 	<a href="https://hestiamb.org">中文官网</a> |
@@ -33,6 +30,7 @@ Bitcoin : bc1q48jt5wg5jaj8g9zy7c3j03cv57j2m2u5anlutu<br>
 Ethereum : 0xfF3Dd2c889bd0Ff73d8085B84A314FC7c88e5D51<br>
 Binance: bnb1l4ywvw5ejfmsgjdcx8jn5lxj7zsun8ktfu7rh8<br>
 Smart Chain: 0xfF3Dd2c889bd0Ff73d8085B84A314FC7c88e5D51<br>
+Monero/XMR: 45p5eKWfp3kYcY3cBtKq2TWpp5HGYFAbre2Xd76sRhWGXfahAj5MkxzV2oPF2VqU617pwS5JZh1h4gy6jTm73vE7PnQ48Rs
 
 ## 功能和服务
 
@@ -67,6 +65,19 @@ Smart Chain: 0xfF3Dd2c889bd0Ff73d8085B84A314FC7c88e5D51<br>
 ```bash
 ssh root@your.server
 ```
+### 步骤 2: 安装配置
+
+下载最新版本的安装脚本：
+
+```bash
+wget https://hestiamb.org/install/hst-install.sh
+```
+
+如果下载因SSL验证错误而失败，请确保您已在系统上安装了ca证书包-您可以使用以下命令执行此操作：
+
+```bash
+apt-get update && apt-get install ca-certificates
+```
 
 ### 步骤 3: 运行安装脚本
 
@@ -86,7 +97,7 @@ bash hst-install.sh
 bash hst-install.sh -h
 ```
 
-另外，您还可以使用 <https://hestiacp.com/install.html>，它允许您通过图形用户界面（GUI）轻松生成安装命令。
+另外，您还可以使用 [安装配置](https://hestiamb.org/install.html)它允许您通过图形用户界面（GUI）轻松生成安装命令。
 
 ## 如何升级现有安装
 
