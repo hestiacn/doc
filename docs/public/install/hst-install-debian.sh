@@ -2261,7 +2261,7 @@ $HESTIA/bin/v-add-sys-filemanager quiet
 #----------------------------------------------------------#
 
 echo "[ * ] 配置 PHP 依赖项..."
-$HESTIA/bin/如何配置nginx来生成软件包管理 quiet
+$HESTIA/bin/v-add-sys-dependencies quiet
 
 echo "[ * ] 安装Rclone并更新Restic ..."
 curl -s https://rclone.org/install.sh | bash > /dev/null 2>&1

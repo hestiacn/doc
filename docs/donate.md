@@ -2,7 +2,7 @@
 layout: page
 title: 赞助Hestia
 ---
-<link rel="stylesheet" href="/.vitepress/theme/styles/donate.css">
+<style src="/.vitepress/theme/styles/donate.css"></style>
 <div class="donation-header">
   <h2>支持Hestia项目</h2><br>
   <p class="subtitle">您的慷慨赞助将助力我们持续维护服务器<br><br>开发新功能并提升服务质量</p>
